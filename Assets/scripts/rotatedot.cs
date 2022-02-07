@@ -6,11 +6,11 @@ using System;
 
 public class rotatedot : MonoBehaviour
 {
-    public float r = 5f;
-    public double speed = 5d;
-    public float centerX = 0f;
-    public float centerY = 0f;
-    private double theta = 0d;
+    public float r = 3;
+    public double speed = 3.14;
+    public float centerX = 0;
+    public float centerY = 0;
+    private double theta = 0;
 
 
     // Start is called before the first frame update
@@ -24,10 +24,12 @@ public class rotatedot : MonoBehaviour
     {
         Vector2 pos = transform.position;
 
-        theta = ((theta * 2 * Math.PI) + speed * Time.deltaTime) % (2 * Math.PI);
+        theta += speed * Time.deltaTime;
 
-        pos.x = centerX + r * Convert.ToSingle(Math.Cos(theta));
-        pos.y = centerY + r * Convert.ToSingle(Math.Sin(theta));
+        pos.x = centerX + (r * Convert.ToSingle(Math.Cos(theta)));
+        pos.y = centerY + (r * Convert.ToSingle(Math.Sin(theta)));
+
+        transform.position = pos;
 
     }
 }
