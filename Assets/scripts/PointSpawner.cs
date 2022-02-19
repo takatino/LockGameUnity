@@ -7,7 +7,7 @@ public class PointSpawner : MonoBehaviour
 {
     
     private float _offset = 0.25f;
-    private float _radius = 57f;
+    private float _radius = 80f;
     public RectTransform target;
     public float normarizedPosition;
     
