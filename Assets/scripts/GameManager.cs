@@ -17,9 +17,12 @@ public class GameManager : MonoBehaviour
     public Image Mask;
     private float threshold = 0.03f;
     private Color defaultColor;
-    
+    public AudioClip sound1;
+    AudioSource audioSource;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         defaultColor = BackGround.color;
         Text.text = Remain.ToString();
         _clickEvent = new UnityEvent();
@@ -64,6 +67,7 @@ public class GameManager : MonoBehaviour
                 BarController.CurrentCondition = BarCondition.Stop;
                 _clickEvent.RemoveListener(OnClicked);
                 _clickEvent.AddListener(Restart);
+                audioSource.PlayOneShot(sound1);
             }
         }
         else
