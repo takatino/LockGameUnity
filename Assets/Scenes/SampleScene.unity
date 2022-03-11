@@ -1557,6 +1557,7 @@ MonoBehaviour:
   BackGround: {fileID: 561298808}
   Mask: {fileID: 113308623}
   sound1: {fileID: 8300000, guid: e131b874f2ffe454e8ecea3de6b605ea, type: 3}
+  sound2: {fileID: 8300000, guid: 74717ceda6b9de64bb624325df97d040, type: 3}
 --- !u!4 &2020159639
 Transform:
   m_ObjectHideFlags: 0
@@ -1581,7 +1582,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e131b874f2ffe454e8ecea3de6b605ea, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.299
   m_Pitch: 1

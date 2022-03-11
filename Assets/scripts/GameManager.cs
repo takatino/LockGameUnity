@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private float threshold = 0.03f;
     private Color defaultColor;
     public AudioClip sound1;
+    public AudioClip sound2;
     AudioSource audioSource;
 
     void Start()
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
             BarController.CurrentCondition = BarCondition.Stop;
             _clickEvent.RemoveListener(OnClicked);
             _clickEvent.AddListener(Restart);
+            audioSource.PlayOneShot(sound2);
         }
     }
 
