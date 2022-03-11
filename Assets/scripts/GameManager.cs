@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private int Remain = 20;
+    private int Remain = 10;
     public BarController BarController;
     public PointSpawner PointSpawner;
     public TextMeshProUGUI Text;
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     private void Restart()
     {
-        Remain = 20;
+        Remain = 10;
         Text.text = Remain.ToString();
         BackGround.color = defaultColor;
         Mask.color = defaultColor;
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     private void OnClicked()
     {
 
-        BarController.TimeSpan = 0.5f + (float) Remain / 20; 
+        BarController.TimeSpan = 0.5f + (float) Remain / 10; 
 
         if (Succeed())
         {
