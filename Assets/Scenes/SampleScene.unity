@@ -1409,6 +1409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b519d7179384b24399406da8b7f3ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockanimation: {fileID: 2116075706}
   BarController: {fileID: 431958131}
   PointSpawner: {fileID: 1928461710}
   Text: {fileID: 1731618470}
@@ -1521,6 +1522,7 @@ GameObject:
   - component: {fileID: 2116075703}
   - component: {fileID: 2116075705}
   - component: {fileID: 2116075704}
+  - component: {fileID: 2116075706}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1585,3 +1587,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116075702}
   m_CullTransparentMesh: 1
+--- !u!114 &2116075706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116075702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f7a8b50d4e327488c3ceab95e3c544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0

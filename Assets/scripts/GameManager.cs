@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     private int Remain = 20;
+    public lockanimation lockanimation;
     public BarController BarController;
     public PointSpawner PointSpawner;
     public TextMeshProUGUI Text;
@@ -23,8 +24,7 @@ public class GameManager : MonoBehaviour
         defaultColor = BackGround.color;
         Text.text = Remain.ToString();
         _clickEvent = new UnityEvent();
-        _clickEvent.AddListener(OnClicked);
-        
+        _clickEvent.AddListener(OnClicked);        
     }
 
     private void Update()
@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         {
             Remain--;
             Text.text = Remain.ToString();
+            lockanimation.trigger = true;
             if (BarController.CurrentCondition == BarCondition.TurnLeft)
                 BarController.CurrentCondition = BarCondition.TurnRight;
             else if (BarController.CurrentCondition == BarCondition.TurnRight)
