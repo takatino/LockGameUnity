@@ -46,13 +46,12 @@ public class GameManager : MonoBehaviour
     private void OnClicked()
     {
 
-        BarController.TimeSpan = 0.5f + (float) Remain / 20; 
+        BarController.TimeSpan = 0.5f + 1; //(float) Remain / 20; 
 
         if (Succeed())
         {
             Remain--;
             Text.text = Remain.ToString();
-            lockanimation.trigger = true;
             if (BarController.CurrentCondition == BarCondition.TurnLeft)
                 BarController.CurrentCondition = BarCondition.TurnRight;
             else if (BarController.CurrentCondition == BarCondition.TurnRight)
@@ -60,6 +59,7 @@ public class GameManager : MonoBehaviour
             PointSpawner.Spawn(UnityEngine.Random.Range(0f, 1f));
             if (Remain <= 0)
             {
+                lockanimation.trigger = true;
                 BackGround.color = Color.yellow;
                 Mask.color = Color.yellow;
                 BarController.CurrentCondition = BarCondition.Stop;
